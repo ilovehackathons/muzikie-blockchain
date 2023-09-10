@@ -22,6 +22,7 @@ export interface Profile {
   bannerHash: Buffer;
   bannerSignature: Buffer;
   creatorAddress: Buffer;
+  nftUrl: string;
 }
 
 export interface ProfileJSON {
@@ -34,6 +35,7 @@ export interface ProfileJSON {
   bannerHash: string;
   bannerSignature: string;
   creatorAddress: string;
+  nftUrl: string;
 }
 
 export interface ProfileAccount {
@@ -53,6 +55,7 @@ export interface CreateCommandParams {
   avatarSignature: Buffer;
   bannerHash: Buffer;
   bannerSignature: Buffer;
+  nftUrl: string;
 }
 export interface SetAttributesCommandParams {
   profileID: Buffer;
@@ -64,6 +67,7 @@ export interface SetAttributesCommandParams {
   avatarSignature: Buffer;
   bannerHash: Buffer;
   bannerSignature: Buffer;
+  nftUrl: string;
 }
 
 export interface Store<Entity> {

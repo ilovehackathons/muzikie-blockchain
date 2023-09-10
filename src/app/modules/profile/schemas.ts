@@ -11,6 +11,7 @@ export const profileStoreSchema = {
     'bannerHash',
     'bannerSignature',
     'creatorAddress',
+    'nftUrl'
   ],
   properties: {
     name: {
@@ -65,6 +66,10 @@ export const profileStoreSchema = {
       format: 'lisk32',
       fieldNumber: 9,
     },
+    nftUrl: {
+      dataType: 'string',
+      fieldNumber: 10,
+    },
   },
 };
 
@@ -93,6 +98,7 @@ export const createCommandParamsSchema = {
     'avatarSignature',
     'bannerHash',
     'bannerSignature',
+    'nftUrl'
   ],
   properties: {
     name: {
@@ -142,6 +148,10 @@ export const createCommandParamsSchema = {
       dataType: 'bytes',
       fieldNumber: 8,
     },
+    nftUrl: {
+      dataType: 'string',
+      fieldNumber: 9,
+    },
   },
 };
 
@@ -159,6 +169,7 @@ export const setAttributesCommandParamsSchema = {
     'avatarSignature',
     'bannerHash',
     'bannerSignature',
+    'nftUrl'
   ],
   properties: {
     profileID: {
@@ -211,6 +222,10 @@ export const setAttributesCommandParamsSchema = {
     bannerSignature: {
       dataType: 'bytes',
       fieldNumber: 9,
+    },
+    nftUrl: {
+      dataType: 'string',
+      fieldNumber: 10,
     },
   },
 };
