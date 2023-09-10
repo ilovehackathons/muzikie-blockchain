@@ -2,7 +2,15 @@
 
 Muzikie is a decentralized music streaming platform, built with ❤️ using [Lisk](https://github.com/LiskHQ/lisk-sdk). Learn more [here](https://medium.com/@muzikie/what-is-muzikie-bfa67b4da085).
 
-## Development
+## RECENT Developments
+
+we have added the URL (which is link for IPFS/Arweave/ for making interactive NFTs
+
+The changes are made to
+
+https://github.com/ilovehackathons/muzikie-blockchain/tree/development/src/app/modules/profile
+
+
 
 #### prerequisite
 
