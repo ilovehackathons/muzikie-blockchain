@@ -37,8 +37,16 @@ export class StreamCommand extends BaseCommand {
     } = context;
     const methodContext = context.getMethodContext();
     const audioSubStore = this.stores.get(AudioStore);
+    const streamCost = BigInt(BASE_COST * (1 - subscription.discount));
 
-    // Throw an error if audio does not exist
+      subscription.streams += BigInt(1);
+      subscription.consumable -= streamCost;
+
+      audio.owners = audio.owners.map((owner, index) => ({
+        address: owner.address,
+        shares: owner.shares,
+        income: audio.owners[index].income + (streamCost * BigInt(owner.shares)) / BigInt(100),
+      }));
     const audioExists = await audioSubStore.has(context, audioID);
     if (!audioExists) {
       throw new Error(`Audio with ID ${audioID.toString('hex')} does not exist.`);

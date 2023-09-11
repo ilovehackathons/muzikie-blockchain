@@ -8,6 +8,7 @@ export interface Subscription {
   members: Buffer[];
   maxMembers: number;
   creatorAddress: Buffer;
+  discount: number;
 }
 
 export interface SubscriptionJSON {

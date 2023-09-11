@@ -39,7 +39,7 @@ export class SetAttributesCommand extends BaseCommand {
 
   public async execute(context: CommandExecuteContext<SetAttributesCommandParams>): Promise<void> {
     const { params, transaction } = context;
-    // Get namehash output of the audio file
+// Get namehash output of the audio file
 
     const audioSubStore = this.stores.get(AudioStore);
 
@@ -59,7 +59,7 @@ export class SetAttributesCommand extends BaseCommand {
     // Create the Audio object and save it on the blockchain
     const updatedObject: Audio = {
       ...params,
-      // set income back
+// set income back
       audioSignature: audioNFT.audioSignature,
       audioHash: audioNFT.audioHash,
       owners: audioNFT.owners,

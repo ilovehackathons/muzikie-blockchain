@@ -27,7 +27,7 @@ export class ReclaimCommand extends BaseCommand {
   public async verify(
     _context: CommandVerifyContext<ReclaimCommandParams>,
   ): Promise<VerificationResult> {
-    // @todo should we validate that the params are empty?
+// @todo should we validate that the params are empty?
     return { status: VerifyStatus.OK };
   }
 
@@ -71,10 +71,10 @@ export class ReclaimCommand extends BaseCommand {
         }
       });
       audioNFT.owners = newOwnersList;
-      // Update audio on the blockchain
+// Update audio on the blockchain
       await audioStore.set(context, audioID, audioNFT);
     }
-    // Transfer the total income from treasury account to the senderAddress
+// Transfer the total income from treasury account to the senderAddress
     await this._tokenMethod.transfer(
       methodContext,
       TREASURY_ADDRESS,
@@ -82,7 +82,7 @@ export class ReclaimCommand extends BaseCommand {
       tokenID,
       claimData.totalClaimed,
     );
-    // Emit a "Income Reclaimed" event
+// Emit a "Income Reclaimed" event
     const audioIncomeReclaimed = this.events.get(AudioIncomeReclaimed);
     audioIncomeReclaimed.add(context, {
       address: context.transaction.senderAddress,

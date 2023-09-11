@@ -58,6 +58,8 @@ export interface CreateCommandParams {
   audioSignature: Buffer;
   audioHash: Buffer;
   feat: Buffer[];
+  price: bigint;
+  discount: number;
 }
 
 export interface DestroyCommandParams {

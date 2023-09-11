@@ -64,7 +64,7 @@ export class CreateCommand extends BaseCommand {
 
   public async execute(context: CommandExecuteContext<CreateCommandParams>): Promise<void> {
     const { params, transaction } = context;
-    // Get namehash output of the audio file
+// Get namehash output of the audio file
     const audioID = getEntityID(context.transaction);
 
     const audioAccountSubStore = this.stores.get(AudioAccountStore);
@@ -82,6 +82,10 @@ export class CreateCommand extends BaseCommand {
       shares: owner.shares,
       income: BigInt(0),
     }));
+    const subscriptionObject: Subscription = {
+      price: BigInt(params.price),
+      discount: params.discount,
+    };
 
     const audioObject: Audio = {
       ...params,

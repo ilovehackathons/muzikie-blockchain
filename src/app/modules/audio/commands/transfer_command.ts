@@ -60,14 +60,14 @@ export class TransferCommand extends BaseCommand {
         }
         return item;
       })
-      // if old owner shares = 0, remove old owner from owners array
+// if old owner shares = 0, remove old owner from owners array
       .filter(item => item.shares > 0);
 
     // if old owner shares = 0, remove audio ID from old owner's ownedAudio array
     const senderAccount = await audioAccountSubStore.get(context, senderAddress);
     if (senderShare.shares === shares) {
       senderAccount.audio.audios = senderAccount.audio.audios.filter(item => !item.equals(audioID));
-      // update audio account in audioAccountSubStore
+// update audio account in audioAccountSubStore
       await audioAccountSubStore.set(context, senderAddress, senderAccount);
     }
 
@@ -89,14 +89,14 @@ export class TransferCommand extends BaseCommand {
 
     const recipientIndex = audioNFT.owners.findIndex(item => item.address.equals(address));
     if (recipientIndex === -1) {
-      // if recipient does not exist, add new owner to owners array
+// if recipient does not exist, add new owner to owners array
       audioNFT.owners.push({
         address,
         shares,
         income: senderShare.shares === shares ? oldIncome : BigInt(0), // income is 0 for new owners
       });
     } else {
-      // if recipient exists, add new owner shares to recipient shares
+// if recipient exists, add new owner shares to recipient shares
       audioNFT.owners[recipientIndex].shares += shares;
     }
 
