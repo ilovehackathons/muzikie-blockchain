@@ -1,10 +1,12 @@
 
 
-## Muziq
+## Symphony nft
+[Demo](assets/demo.mov)
 
 First, run the development server:
 
 ```bash
+npm i
 npm run dev
 # or
 yarn dev
