@@ -1,4 +1,8 @@
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
+const Nft = dynamic(() => import('@/comp/Nft'), {
+  loading: () => <p>Loading...</p>,
+})
 
 export default function Home() {
   return (
@@ -14,8 +18,8 @@ export default function Home() {
             </div>
           </div>
           <div className=' mt-[10px] overflow-auto hover:scale-125 transform transition-all duration-[500ms]'>
-            {/* <Image src={"/nft.png"} width={400} height={400} className="w-full rounded-md"/> */}
-            <iframe _ngcontent-dyi-c98="" width="100%" height="500" allow="accelerometer; camera; gyroscope; microphone; xr-spatial-tracking; midi;" className="rounded-md w-full" sandbox="allow-scripts allow-downloads" scrolling="" src="https://assets.objkt.media/file/assets-003/QmcTuv6dfyXfPz9Mpk8PcpXjwguwHucTEiQf5c3cikBSu9/artifact/index.html?objkt=8&amp;creator=tz1XxTKUFaCRZqv5BMQviuxrQs8VciG9ffE6&amp;viewer=null"></iframe>
+            {/* <Image src={"/nft.png"} width={400} height={400} className="w-full rounded-md"/> */} 
+            <Nft></Nft>
           </div>
           <div className=' flex justify-between items-center mt-3  mx-[2%]'>
             <div className='px-[15px] py-[3px] bg-[#F2F2F2] rounded-md hover:underline hover:cursor-pointer'>
@@ -31,7 +35,7 @@ export default function Home() {
             <div className=' p-[5px] rounded bg-[#F2F2F2]'>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#565656" className="w-5 h-5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" />
-              </svg>
+              </svg> 
             </div>
             <p className='text-[#515357] ml-3'>Drag to rotate the sculpture</p>
           </div>
