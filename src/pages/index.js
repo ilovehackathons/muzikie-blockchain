@@ -2,9 +2,12 @@ import Image from 'next/image'
 import dynamic from 'next/dynamic'
 const Nft = dynamic(() => import('@/comp/Nft'), {
   loading: () => <p>Loading...</p>,
+  ssr: false, 
 })
 
 export default function Home() {
+  const cable_link = "https://cables.gl/p/rpdF5G"
+  const title = "#0008 Fungi Mandelbrot"
   return (
     <main className='h-screen w-full bg-gradient-to-tr from-[#FFF8F5] to-[#E9EFFD] flex items-center justify-center'>
       <div className='h-[80%] w-[90%] flex justify-between '>
@@ -23,7 +26,7 @@ export default function Home() {
           </div>
           <div className=' flex justify-between items-center mt-3  mx-[2%]'>
             <div className='px-[15px] py-[3px] bg-[#F2F2F2] rounded-md hover:underline hover:cursor-pointer'>
-              <p className=' font-medium text-2xl text-[#565656]'>#0007 Flower Cloud</p>
+              <p className=' font-medium text-2xl text-[#565656]'>{title}</p>
             </div>
             <div className=''>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#000000" className="w-6 h-6">
@@ -66,7 +69,7 @@ export default function Home() {
                   <div className='mt-2'></div>
                   For iOS/Mac turn on Advanced Mode.
                   <div className='mt-2'></div>
-                  cables.gl patch: <a className='text-[#0055ffa7]' href={"https://cables.gl/p/ZNOQhB"}>https://cables.gl/p/ZNOQhB</a>
+                  cables.gl patch: <a className='text-[#0055ffa7]' href={cable_link}>{cable_link}</a> 
                 </p>
               </div>
             </div>
@@ -87,6 +90,11 @@ export default function Home() {
                   <span className='border border-[#0000] hover:border hover:border-[#00000010] hover:cursor-pointer px-2 hover:rounded'>ai</span>
                   <span className='border border-[#0000] hover:border hover:border-[#00000010] hover:cursor-pointer px-2 hover:rounded'>flowers</span>
                   <span className='border border-[#0000] hover:border hover:border-[#00000010] hover:cursor-pointer px-2 hover:rounded'>pointcloud</span>
+                  <span className='border border-[#0000] hover:border hover:border-[#00000010] hover:cursor-pointer px-2 hover:rounded'>cable.gl</span>
+                  <span className='border border-[#0000] hover:border hover:border-[#00000010] hover:cursor-pointer px-2 hover:rounded'>fungi</span>
+                  <span className='border border-[#0000] hover:border hover:border-[#00000010] hover:cursor-pointer px-2 hover:rounded'>stablediffusion</span>
+                  <span className='border border-[#0000] hover:border hover:border-[#00000010] hover:cursor-pointer px-2 hover:rounded'>hologram</span>
+                  <span className='border border-[#0000] hover:border hover:border-[#00000010] hover:cursor-pointer px-2 hover:rounded'>koletkyw</span>
                   
                 </p>
               </div>
@@ -108,31 +116,31 @@ export default function Home() {
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#000000" className="w-4 h-4">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
                     </svg>
-                    <p className='ml-2 text-black'>Jul 14, 2023 <span className='text-[#0000005e] ml-1'>- minted</span></p>
+                    <p className='ml-2 text-black'>Sep 11, 2023 <span className='text-[#0000005e] ml-1'>- minted</span></p>
                   </span>
                   <span className=' flex items-center mt-1 border border-transparent hover:border hover:border-[#00000010] px-1 hover:rounded'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#000000" className="w-4 h-4">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
                     </svg>
-                    <p className='ml-2 text-black'>IFPS <span className='text-[#0000005e] ml-1'>- artifact</span></p>
+                    <a href='https://ipfs.io/ipfs/QmVTfRbFVntYjE41fAUSLU8knehtNLiUtjVXJtVcky8Zya/' className='ml-2 text-black'>IFPS <span className='text-[#0000005e] ml-1'>- artifact</span></a>
                   </span>
                   <span className=' flex items-center mt-1 border border-transparent hover:border hover:border-[#00000010] px-1 hover:rounded'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#000000" className="w-4 h-4">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
                     </svg>
-                    <p className='ml-2 text-black'>CDN <span className='text-[#0000005e] ml-1'>- artifact</span></p>
+                    <a href='https://assets.objkt.media/file/assets-003/QmVTfRbFVntYjE41fAUSLU8knehtNLiUtjVXJtVcky8Zya/artifact/index.html' className='ml-2 text-black'>CDN <span className='text-[#0000005e] ml-1'>- artifact</span></a>
                   </span>
                   <span className=' flex items-center mt-1 border border-transparent hover:border hover:border-[#00000010] px-1 hover:rounded'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#000000" className="w-4 h-4">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
                     </svg>
-                    <p className='ml-2 text-black'>Contract <span className='text-[#0000005e] ml-1'></span></p>
+                    <a href='https://tzkt.io/KT1JcgBvePhpyUABv8w7B57PohYPqdx3jJGk' className='ml-2 text-black'>Contract <span className='text-[#0000005e] ml-1'></span></a>
                   </span>
                   <span className=' flex items-center mt-1 border border-transparent hover:border hover:border-[#00000010] px-1 hover:rounded'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#000000" className="w-4 h-4">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
                     </svg>
-                    <p className='ml-2 text-black'>License <span className='text-[#0000005e] ml-1'></span></p>
+                    <p className='ml-2 text-black'>License <span className='text-[#0000005e] ml-1'>: CC-BY</span></p>
                   </span>
                   
                 </p>
