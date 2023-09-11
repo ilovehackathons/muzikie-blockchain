@@ -1,7 +1,7 @@
 
 
 ## Symphony nft
-[Demo](assets/demo.mov)
+[Demo](assets/demo.mp4)
 
 First, run the development server:
 
