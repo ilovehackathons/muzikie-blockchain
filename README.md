@@ -2,7 +2,8 @@
 
 ## Symphony nft
 
-https://raw.githubusercontent.com/ilovehackathons/muzikie-blockchain/nextjs-frontend/assets/demo.mp4
+
+[![Watch the video](assets/picture.png)](https://vimeo.com/863608704?share=copy)
 
 First, run the development server:
 
